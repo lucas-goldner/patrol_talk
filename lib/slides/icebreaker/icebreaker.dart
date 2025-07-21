@@ -17,16 +17,14 @@ class IcebreakerSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: FlutterDeckSlideStepsBuilder(
-            builder: (context, step) => Center(
-              child: GlassContainer(
-                width: 900,
-                height: 600,
-                padding: const EdgeInsets.all(60),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: FlutterDeckSlideStepsBuilder(
+              builder: (context, step) => Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                     Text(
                       'Hey everyone! Quick show of hands:',
                       style: TextStyle(
@@ -101,9 +99,8 @@ class IcebreakerSlide extends FlutterDeckSlideWidget {
                           fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                         ),
                       ),
-                    ],
                   ],
-                ),
+                ],
               ),
             ),
           ),

@@ -16,10 +16,13 @@ class ClosingSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 Text(
                   '🙋‍♂️ Thank You!',
                   style: TextStyle(
@@ -30,9 +33,16 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-                GlassContainer(
-                  width: 800,
+                Container(
                   padding: const EdgeInsets.all(40),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: Colors.grey.withValues(alpha: 0.3),
+                      width: 1,
+                    ),
+                  ),
                   child: Column(
                     children: [
                       Text(
@@ -103,7 +113,8 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                     fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                   ),
                 ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

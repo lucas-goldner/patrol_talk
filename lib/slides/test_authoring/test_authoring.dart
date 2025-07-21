@@ -17,11 +17,14 @@ class TestAuthoringSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: FlutterDeckSlideStepsBuilder(
-            builder: (context, step) => Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: FlutterDeckSlideStepsBuilder(
+              builder: (context, step) => Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                   Text(
                     '🧠 Test Authoring Demo',
                     style: TextStyle(
@@ -130,7 +133,8 @@ expect($('Welcome, Charlie!'), exists);''',
                       ),
                     ),
                   ],
-                ],
+                  ],
+                ),
               ),
             ),
           ),

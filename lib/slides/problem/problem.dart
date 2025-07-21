@@ -17,37 +17,29 @@ class ProblemSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: FlutterDeckSlideStepsBuilder(
-            builder: (context, step) => Center(
-              child: Column(
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: FlutterDeckSlideStepsBuilder(
+              builder: (context, step) => Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GlassContainer(
-                    width: 1000,
-                    height: 200,
-                    padding: const EdgeInsets.all(40),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '❌ The Problem',
-                          style: TextStyle(
-                            fontSize: 56,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red[700],
-                            fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          'Flutter has no really great solution for UI testing',
-                          style: TextStyle(
-                            fontSize: 32,
-                            color: Colors.black87,
-                            fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                          ),
-                        ),
-                      ],
+                  Text(
+                    '❌ The Problem',
+                    style: TextStyle(
+                      fontSize: 56,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red[700],
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Flutter has no really great solution for UI testing',
+                    style: TextStyle(
+                      fontSize: 32,
+                      color: Colors.black87,
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                     ),
                   ),
                   const SizedBox(height: 40),
@@ -55,7 +47,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const _ProblemCard(
+                        _ProblemCard(
                           number: '1',
                           title: 'Native UI Interactions',
                           content: 'Permission dialogs, WebViews, Apple/Google sign-in\n\nFlutter can\'t do that.',
@@ -64,7 +56,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                         ),
                         const SizedBox(width: 20),
                         if (step >= 2)
-                          const _ProblemCard(
+                          _ProblemCard(
                             number: '2',
                             title: 'Verbose Code',
                             content: 'Even the simplest test becomes a\n\nverbose wall of code.',
@@ -153,10 +145,16 @@ class _ProblemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GlassContainer(
-      width: 400,
-      height: 250,
+    return Container(
       padding: const EdgeInsets.all(30),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: color.withValues(alpha: 0.3),
+          width: 2,
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

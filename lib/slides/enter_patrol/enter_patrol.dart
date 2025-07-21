@@ -16,7 +16,9 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: Center(
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -36,10 +38,16 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                GlassContainer(
-                  width: 800,
-                  height: 200,
+                Container(
                   padding: const EdgeInsets.all(40),
+                  decoration: BoxDecoration(
+                    color: Colors.blue.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Colors.blue.withValues(alpha: 0.3),
+                      width: 2,
+                    ),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

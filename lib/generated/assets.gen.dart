@@ -32,6 +32,10 @@ class $AssetsImagesGen {
 
   $AssetsImagesAppleNewsGen get appleNews => const $AssetsImagesAppleNewsGen();
 
+  /// File path: assets/images/background.webp
+  AssetGenImage get background =>
+      const AssetGenImage('assets/images/background.webp');
+
   /// File path: assets/images/fluttercon_logo.svg
   SvgGenImage get flutterconLogo =>
       const SvgGenImage('assets/images/fluttercon_logo.svg');
@@ -67,6 +71,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        background,
         flutterconLogo,
         flutterconParticleCircle,
         flutterconTower,
@@ -231,6 +236,7 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
+      colorFilter: colorFilter,
       color: color,
       colorBlendMode: colorBlendMode,
       clipBehavior: clipBehavior,

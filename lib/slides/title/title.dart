@@ -17,58 +17,55 @@ class TitleSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: Center(
           child: GlassContainer(
-            width: 800,
-            height: 500,
-            padding: const EdgeInsets.all(40),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  '🧪 Patrol',
-                  style: TextStyle(
-                    fontSize: 88,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  'The Flutter E2E Testing Framework',
-                  style: TextStyle(
-                    fontSize: 36,
-                    color: Colors.black87,
-                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                  ),
-                ),
-                const SizedBox(height: 40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.bug_report,
-                      size: 40,
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '🧪 Patrol',
+                    style: TextStyle(
+                      fontSize: 88,
+                      fontWeight: FontWeight.bold,
                       color: Colors.black87,
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                     ),
-                    const SizedBox(width: 20),
-                    Text(
-                      'LeanCode',
-                      style: TextStyle(
-                        fontSize: 32,
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'The Flutter E2E Testing Framework',
+                    style: TextStyle(
+                      fontSize: 36,
+                      color: Colors.black87,
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(
+                        Icons.bug_report,
+                        size: 40,
                         color: Colors.black87,
-                        fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      const SizedBox(width: 20),
+                      Text(
+                        'LeanCode',
+                        style: TextStyle(
+                          fontSize: 32,
+                          color: Colors.black87,
+                          fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
           ),
         ),
       );
 }
-
-

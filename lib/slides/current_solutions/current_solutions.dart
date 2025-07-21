@@ -17,9 +17,11 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
         builder: (context) => SlideWithMesh(
-          child: FlutterDeckSlideStepsBuilder(
-            builder: (context, step) => Center(
-              child: Column(
+          child: GlassContainer(
+            margin: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(64),
+            child: FlutterDeckSlideStepsBuilder(
+              builder: (context, step) => Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -62,10 +64,16 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                   ),
                   if (step >= 4) ...[
                     const SizedBox(height: 60),
-                    GlassContainer(
-                      width: 900,
-                      height: 200,
+                    Container(
                       padding: const EdgeInsets.all(30),
+                      decoration: BoxDecoration(
+                        color: Colors.red.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: Colors.red.withValues(alpha: 0.3),
+                          width: 2,
+                        ),
+                      ),
                       child: Column(
                         children: [
                           Text(
@@ -123,10 +131,16 @@ class _SolutionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GlassContainer(
-      width: 280,
-      height: 180,
+    return Container(
       padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: color.withValues(alpha: 0.3),
+          width: 2,
+        ),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

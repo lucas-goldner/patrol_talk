@@ -5,8 +5,8 @@ class GlassContainer extends StatelessWidget {
   const GlassContainer({
     required this.child,
     super.key,
-    this.width = double.infinity,
-    this.height = double.infinity,
+    this.width,
+    this.height,
     this.borderRadius = 20,
     this.blur = 10,
     this.opacity = 0.1,
@@ -18,8 +18,8 @@ class GlassContainer extends StatelessWidget {
   });
   
   final Widget child;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final double borderRadius;
   final double blur;
   final double opacity;
@@ -52,7 +52,7 @@ class GlassContainer extends StatelessWidget {
                   ),
               borderRadius: BorderRadius.circular(borderRadius),
               border: Border.all(
-                color: borderColor ?? Colors.white.withValues(alpha: 0.2),
+                color: borderColor ?? Colors.white.withValues(alpha: 0.1),
                 width: borderWidth,
               ),
             ),
