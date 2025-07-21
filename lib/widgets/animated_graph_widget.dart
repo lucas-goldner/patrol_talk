@@ -15,45 +15,115 @@ class GraphData {
   final Color color;
 }
 
-class AnimatedGraphWidget extends StatelessWidget {
+class _AnimatedGraphItem {
+  _AnimatedGraphItem({
+    required this.key,
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  final GlobalKey key;
+  final String label;
+  int value;
+  final Color color;
+}
+
+class AnimatedGraphWidget extends StatefulWidget {
   const AnimatedGraphWidget({
     required this.data,
     this.showStats = true,
     this.backgroundColor = const Color(0xFF1A1A2E),
-    this.gridColor,
     super.key,
   });
 
   final List<GraphData> data;
   final bool showStats;
   final Color backgroundColor;
-  final Color? gridColor;
 
-  int get _maxValue => data.isEmpty
+  @override
+  State<AnimatedGraphWidget> createState() => _AnimatedGraphWidgetState();
+}
+
+class _AnimatedGraphWidgetState extends State<AnimatedGraphWidget> {
+  late List<_AnimatedGraphItem> _animatedData;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeData();
+  }
+
+  @override
+  void didUpdateWidget(AnimatedGraphWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _updateData();
+  }
+
+  void _initializeData() {
+    _animatedData = widget.data
+        .map(
+          (data) => _AnimatedGraphItem(
+            key: GlobalObjectKey('graph_item_${data.label}'),
+            label: data.label,
+            value: data.value,
+            color: data.color,
+          ),
+        )
+        .toList();
+    // Sort by value (highest first)
+    _animatedData.sort((a, b) => b.value.compareTo(a.value));
+  }
+
+  void _updateData() {
+    setState(() {
+      // Update values by matching labels (since order might change after sorting)
+      for (final newData in widget.data) {
+        try {
+          final existingItem = _animatedData.firstWhere(
+            (item) => item.label == newData.label,
+          );
+          existingItem.value = newData.value;
+        } catch (e) {
+          // Item doesn't exist, add it
+          _animatedData.add(
+            _AnimatedGraphItem(
+              key: GlobalObjectKey('graph_item_${newData.label}'),
+              label: newData.label,
+              value: newData.value,
+              color: newData.color,
+            ),
+          );
+        }
+      }
+      
+      // Remove items that are no longer in the new data
+      _animatedData.removeWhere(
+        (item) => !widget.data.any((newData) => newData.label == item.label),
+      );
+      
+      // Sort by value (highest first) - this creates the reordering animation
+      _animatedData.sort((a, b) => b.value.compareTo(a.value));
+    });
+  }
+
+  int get _maxValue => _animatedData.isEmpty
       ? 1
-      : data.map((e) => e.value).reduce((a, b) => max(a, b));
+      : _animatedData.map((e) => e.value).reduce((a, b) => max(a, b));
 
-  int get _totalValue => data.fold(0, (sum, item) => sum + item.value);
+  int get _totalValue => _animatedData.fold(0, (sum, item) => sum + item.value);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: widget.backgroundColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: Colors.blue[400]?.withValues(alpha: 0.5) ?? Colors.blue,
         ),
       ),
-      child: Stack(
-        children: [
-          // Grid background
-          CustomPaint(
-            size: Size.infinite,
-            painter: GridPainter(
-              color: gridColor ?? Colors.blue[900]!.withValues(alpha: 0.5),
-            ),
-          ),
+      child: 
           // Graph content
           Padding(
             padding: const EdgeInsets.all(32),
@@ -61,7 +131,7 @@ class AnimatedGraphWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Stats panel
-                if (showStats) ...[
+                if (widget.showStats) ...[
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
@@ -117,16 +187,16 @@ class AnimatedGraphWidget extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            for (int i = 0; i < data.length; i++)
+                            for (int i = 0; i < _animatedData.length; i++)
                               Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: AnimatedTo.spring(
-                                  globalKey: GlobalObjectKey('bar_$i'),
+                                  globalKey: _animatedData[i].key,
                                   child: _Bar(
-                                    label: data[i].label,
-                                    value: data[i].value,
+                                    label: _animatedData[i].label,
+                                    value: _animatedData[i].value,
                                     maxValue: _maxValue,
-                                    color: data[i].color,
+                                    color: _animatedData[i].color,
                                   ),
                                 ),
                               ),
@@ -139,8 +209,6 @@ class AnimatedGraphWidget extends StatelessWidget {
               ],
             ),
           ),
-        ],
-      ),
     );
   }
 }
@@ -268,36 +336,4 @@ class _StatItem extends StatelessWidget {
       ],
     );
   }
-}
-
-class GridPainter extends CustomPainter {
-  GridPainter({required this.color});
-
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..strokeWidth = 1;
-
-    const spacing = 30;
-    for (var i = 0; i < size.width; i += spacing) {
-      canvas.drawLine(
-        Offset(i.toDouble(), 0),
-        Offset(i.toDouble(), size.height),
-        paint,
-      );
-    }
-    for (var i = 0; i < size.height; i += spacing) {
-      canvas.drawLine(
-        Offset(0, i.toDouble()),
-        Offset(size.width, i.toDouble()),
-        paint,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
