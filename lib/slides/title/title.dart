@@ -1,0 +1,74 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_deck/flutter_deck.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:patrol_presentation/core/widgets/glass_container.dart';
+import 'package:patrol_presentation/core/widgets/slide_with_mesh.dart';
+
+class TitleSlide extends FlutterDeckSlideWidget {
+  const TitleSlide()
+      : super(
+          configuration: const FlutterDeckSlideConfiguration(
+            route: '/title-slide',
+            title: 'Patrol: The Flutter E2E Testing Framework',
+            footer: FlutterDeckFooterConfiguration(showFooter: false),
+          ),
+        );
+
+  @override
+  FlutterDeckSlide build(BuildContext context) => FlutterDeckSlide.custom(
+        builder: (context) => SlideWithMesh(
+          child: Center(
+          child: GlassContainer(
+            width: 800,
+            height: 500,
+            padding: const EdgeInsets.all(40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '🧪 Patrol',
+                  style: TextStyle(
+                    fontSize: 88,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'The Flutter E2E Testing Framework',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: Colors.black87,
+                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                  ),
+                ),
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.bug_report,
+                      size: 40,
+                      color: Colors.black87,
+                    ),
+                    const SizedBox(width: 20),
+                    Text(
+                      'LeanCode',
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.black87,
+                        fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          ),
+        ),
+      );
+}
+
+
