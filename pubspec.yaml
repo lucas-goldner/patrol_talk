@@ -13,17 +13,11 @@ dependencies:
   flutter_animate: ^4.5.0
   flutter_deck: ^0.14.0
   flutter_hooks: ^0.20.5
-  flutter_inappwebview: ^6.1.5
   flutter_svg: ^1.1.6
   google_fonts: ^4.0.4
-  liquid_glass_renderer: ^0.1.1-dev.9
   mesh: ^0.5.0
   rive: ^0.13.5
   url_launcher: ^6.2.4
-  liquido:
-    git:
-      url: https://github.com/renancaraujo/liquido.git
-      ref: main
 
 dev_dependencies:
   dart_code_metrics: ^5.7.3
