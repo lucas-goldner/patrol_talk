@@ -3,7 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/backgrounds/mesh_deck_background.dart';
-import 'package:patrol_presentation/slides/icebreaker/icebreaker.dart';
+import 'package:patrol_presentation/slides/question_1/question_1.dart';
+import 'package:patrol_presentation/slides/question_2/question_2.dart';
+import 'package:patrol_presentation/slides/question_3/question_3.dart';
 import 'package:patrol_presentation/slides/problem/problem.dart';
 import 'package:patrol_presentation/slides/current_solutions/current_solutions.dart';
 import 'package:patrol_presentation/slides/enter_patrol/enter_patrol.dart';
@@ -14,8 +16,12 @@ import 'package:patrol_presentation/slides/real_features/real_features.dart';
 import 'package:patrol_presentation/slides/summary/summary.dart';
 import 'package:patrol_presentation/slides/closing/closing.dart';
 import 'package:patrol_presentation/slides/title/title.dart';
+import 'package:patrol_presentation/services/websocket_service.dart';
 
-void main() => runApp(const FlutterDeckExample());
+void main() {
+  WebSocketService().connect();
+  runApp(const FlutterDeckExample());
+}
 
 class FlutterDeckExample extends StatelessWidget {
   const FlutterDeckExample({super.key});
@@ -82,7 +88,9 @@ class FlutterDeckExample extends StatelessWidget {
           ),
           slides: const [
             TitleSlide(),
-            IcebreakerSlide(),
+            Question1Slide(),
+            Question2Slide(),
+            Question3Slide(),
             ProblemSlide(),
             CurrentSolutionsSlide(),
             EnterPatrolSlide(),
