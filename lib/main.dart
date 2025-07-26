@@ -14,8 +14,11 @@ import 'package:patrol_presentation/slides/test_authoring/test_authoring.dart';
 import 'package:patrol_presentation/slides/under_the_hood/under_the_hood.dart';
 import 'package:patrol_presentation/slides/real_features/real_features.dart';
 import 'package:patrol_presentation/slides/summary/summary.dart';
+import 'package:patrol_presentation/slides/codemagic_patrol/codemagic_patrol.dart';
+import 'package:patrol_presentation/slides/demo/demo.dart';
 import 'package:patrol_presentation/slides/closing/closing.dart';
 import 'package:patrol_presentation/slides/title/title.dart';
+import 'package:patrol_presentation/slides/speaker/speaker.dart';
 import 'package:patrol_presentation/services/websocket_service.dart';
 
 void main() {
@@ -88,6 +91,7 @@ class FlutterDeckExample extends StatelessWidget {
           ),
           slides: const [
             TitleSlide(),
+            SpeakerSlide(),
             Question1Slide(),
             Question2Slide(),
             Question3Slide(),
@@ -99,6 +103,8 @@ class FlutterDeckExample extends StatelessWidget {
             UnderTheHoodSlide(),
             RealFeaturesSlide(),
             SummarySlide(),
+            CodemagicPatrolSlide(),
+            DemoSlide(),
             ClosingSlide(),
           ],
         ),

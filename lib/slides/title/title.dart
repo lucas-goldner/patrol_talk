@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/widgets/glass_container.dart';
 import 'package:patrol_presentation/core/widgets/slide_with_mesh.dart';
@@ -42,23 +43,18 @@ class TitleSlide extends FlutterDeckSlideWidget {
                       fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 60),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
-                        Icons.bug_report,
-                        size: 40,
-                        color: Colors.black87,
+                      SvgPicture.asset(
+                        'assets/images/leancode-logo.svg',
+                        height: 80,
                       ),
-                      const SizedBox(width: 20),
-                      Text(
-                        'LeanCode',
-                        style: TextStyle(
-                          fontSize: 32,
-                          color: Colors.black87,
-                          fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                        ),
+                      const SizedBox(width: 60),
+                      Image.asset(
+                        'assets/images/patrol.webp',
+                        height: 80,
                       ),
                     ],
                   ),

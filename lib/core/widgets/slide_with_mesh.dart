@@ -25,9 +25,9 @@ class SlideWithMesh extends StatelessWidget {
                 (-0.01, 1.01).v, (1.01, 1.0).v, (1.02, 0.73).v,
               ],
               colors: const [
-                Color(0xffa52b68), Color(0xff4693a9), Color(0xff4693a9),
-                Color(0xffa52ba0), Color(0xffe8dad4), Color(0xff4693a9),
-                Color(0xff9715a9), Color(0xff4693a9), Color(0xff4693a9),
+                Color(0xff87CEEB), Color(0xffFFD700), Color(0xffADD8E6),
+                Color(0xffFFF8DC), Color(0xffB0E0E6), Color(0xffFFEB3B),
+                Color(0xff87CEFA), Color(0xffFFFACD), Color(0xff9DD9F3),
               ],
             ),
           ),

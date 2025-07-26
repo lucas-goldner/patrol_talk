@@ -31,19 +31,19 @@ class MeshDeckBackground extends StatelessWidget {
         ],
         colors: const [
           // Row 1
-          Color(0xffa52b68),
-          Color(0xff4693a9),
-          Color(0xff4693a9),
+          Color(0xff87CEEB), // Sky blue
+          Color(0xffFFD700), // Gold yellow
+          Color(0xffADD8E6), // Light blue
 
           // Row 2
-          Color(0xffa52ba0),
-          Color(0xffe8dad4),
-          Color(0xff4693a9),
+          Color(0xffFFF8DC), // Cornsilk (light yellow)
+          Color(0xffB0E0E6), // Powder blue
+          Color(0xffFFEB3B), // Yellow
 
           // Row 3
-          Color(0xff9715a9),
-          Color(0xff4693a9),
-          Color(0xff4693a9),
+          Color(0xff87CEFA), // Light sky blue
+          Color(0xffFFFACD), // Lemon chiffon (pale yellow)
+          Color(0xff9DD9F3), // Lighter blue
         ],
       ),
     );

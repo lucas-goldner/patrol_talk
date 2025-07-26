@@ -34,12 +34,16 @@ class AnimatedGraphWidget extends StatefulWidget {
     required this.data,
     this.showStats = true,
     this.backgroundColor = const Color(0xFF1A1A2E),
+    this.labelFontSize = 14,
+    this.valueFontSize = 18,
     super.key,
   });
 
   final List<GraphData> data;
   final bool showStats;
   final Color backgroundColor;
+  final double labelFontSize;
+  final double valueFontSize;
 
   @override
   State<AnimatedGraphWidget> createState() => _AnimatedGraphWidgetState();
@@ -119,9 +123,6 @@ class _AnimatedGraphWidgetState extends State<AnimatedGraphWidget> {
       decoration: BoxDecoration(
         color: widget.backgroundColor,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: Colors.blue[400]?.withValues(alpha: 0.5) ?? Colors.blue,
-        ),
       ),
       child: 
           // Graph content
@@ -189,7 +190,7 @@ class _AnimatedGraphWidgetState extends State<AnimatedGraphWidget> {
                           children: [
                             for (int i = 0; i < _animatedData.length; i++)
                               Padding(
-                                padding: const EdgeInsets.only(bottom: 16),
+                                padding: const EdgeInsets.only(bottom: 24),
                                 child: AnimatedTo.spring(
                                   globalKey: _animatedData[i].key,
                                   child: _Bar(
@@ -197,6 +198,8 @@ class _AnimatedGraphWidgetState extends State<AnimatedGraphWidget> {
                                     value: _animatedData[i].value,
                                     maxValue: _maxValue,
                                     color: _animatedData[i].color,
+                                    labelFontSize: widget.labelFontSize,
+                                    valueFontSize: widget.valueFontSize,
                                   ),
                                 ),
                               ),
@@ -219,12 +222,16 @@ class _Bar extends StatelessWidget {
     required this.value,
     required this.maxValue,
     required this.color,
+    required this.labelFontSize,
+    required this.valueFontSize,
   });
 
   final String label;
   final int value;
   final int maxValue;
   final Color color;
+  final double labelFontSize;
+  final double valueFontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -235,7 +242,7 @@ class _Bar extends StatelessWidget {
           label,
           style: TextStyle(
             color: Colors.blue[300] ?? Colors.blue,
-            fontSize: 14,
+            fontSize: labelFontSize,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -248,7 +255,7 @@ class _Bar extends StatelessWidget {
                 : 0.0;
             return AnimatedContainer(
               duration: const Duration(milliseconds: 300),
-              height: 40,
+              height: valueFontSize * 1.67,
               width: width,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -269,10 +276,10 @@ class _Bar extends StatelessWidget {
               child: Center(
                 child: Text(
                   value.toString(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: valueFontSize,
                   ),
                 ),
               ),

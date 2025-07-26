@@ -78,6 +78,8 @@ class Question1Slide extends FlutterDeckSlideWidget {
                       return AnimatedGraphWidget(
                         data: graphData,
                         backgroundColor: Colors.transparent,
+                        labelFontSize: 28,
+                        valueFontSize: 36,
                       );
                     },
                   ),

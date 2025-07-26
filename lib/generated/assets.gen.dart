@@ -36,6 +36,10 @@ class $AssetsImagesGen {
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.webp');
 
+  /// File path: assets/images/codemagic-patrol.png
+  AssetGenImage get codemagicPatrol =>
+      const AssetGenImage('assets/images/codemagic-patrol.png');
+
   /// File path: assets/images/fluttercon_logo.svg
   SvgGenImage get flutterconLogo =>
       const SvgGenImage('assets/images/fluttercon_logo.svg');
@@ -52,6 +56,14 @@ class $AssetsImagesGen {
   SvgGenImage get flutterconTowerBase =>
       const SvgGenImage('assets/images/fluttercon_tower_base.svg');
 
+  /// File path: assets/images/ios-sign-in.png
+  AssetGenImage get iosSignIn =>
+      const AssetGenImage('assets/images/ios-sign-in.png');
+
+  /// File path: assets/images/ios-webview.webp
+  AssetGenImage get iosWebview =>
+      const AssetGenImage('assets/images/ios-webview.webp');
+
   /// File path: assets/images/iphone_in_hand.png
   AssetGenImage get iphoneInHand =>
       const AssetGenImage('assets/images/iphone_in_hand.png');
@@ -59,8 +71,19 @@ class $AssetsImagesGen {
   /// File path: assets/images/issue.webp
   AssetGenImage get issue => const AssetGenImage('assets/images/issue.webp');
 
+  /// File path: assets/images/leancode-logo.svg
+  SvgGenImage get leancodeLogo =>
+      const SvgGenImage('assets/images/leancode-logo.svg');
+
   /// File path: assets/images/lucas.jpeg
   AssetGenImage get lucas => const AssetGenImage('assets/images/lucas.jpeg');
+
+  /// File path: assets/images/patrol.webp
+  AssetGenImage get patrol => const AssetGenImage('assets/images/patrol.webp');
+
+  /// File path: assets/images/permission-main.webp
+  AssetGenImage get permissionMain =>
+      const AssetGenImage('assets/images/permission-main.webp');
 
   /// File path: assets/images/piinks.jpg
   AssetGenImage get piinks => const AssetGenImage('assets/images/piinks.jpg');
@@ -72,13 +95,19 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
         background,
+        codemagicPatrol,
         flutterconLogo,
         flutterconParticleCircle,
         flutterconTower,
         flutterconTowerBase,
+        iosSignIn,
+        iosWebview,
         iphoneInHand,
         issue,
+        leancodeLogo,
         lucas,
+        patrol,
+        permissionMain,
         piinks,
         youtrust
       ];

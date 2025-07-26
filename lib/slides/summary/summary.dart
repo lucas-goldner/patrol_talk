@@ -20,98 +20,100 @@ class SummarySlide extends FlutterDeckSlideWidget {
             margin: const EdgeInsets.all(32),
             padding: const EdgeInsets.all(64),
             child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Text(
-                  '🎯 Summary',
-                  style: TextStyle(
-                    fontSize: 64,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  'Flutter finally has a test framework it deserves',
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black54,
-                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                  ),
-                ),
-                const SizedBox(height: 40),
-                Container(
-                  padding: const EdgeInsets.all(40),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: Colors.grey.withValues(alpha: 0.3),
-                      width: 1,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '🎯 Summary',
+                      style: TextStyle(
+                        fontSize: 48,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                        fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                      ),
                     ),
-                  ),
-                  child: Column(
-                    children: [
-                      _SummaryItem(
-                        icon: Icons.phone_android,
-                        text: 'Native UI automation',
-                        color: Colors.blue,
+                    const SizedBox(height: 16),
+                    Text(
+                      'Flutter finally has a test framework it deserves',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black54,
+                        fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                       ),
-                      const SizedBox(height: 20),
-                      _SummaryItem(
-                        icon: Icons.api,
-                        text: 'Intuitive API',
-                        color: Colors.green,
-                      ),
-                      const SizedBox(height: 20),
-                      _SummaryItem(
-                        icon: Icons.security,
-                        text: 'Full isolation',
-                        color: Colors.orange,
-                      ),
-                      const SizedBox(height: 20),
-                      _SummaryItem(
-                        icon: Icons.cloud_done,
-                        text: 'Device farm support',
-                        color: Colors.purple,
-                      ),
-                      const SizedBox(height: 20),
-                      _SummaryItem(
-                        icon: Icons.business,
-                        text: 'Real-world production use',
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 30),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 40,
-                    vertical: 20,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.green.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: Colors.green.withValues(alpha: 0.3),
-                      width: 2,
                     ),
-                  ),
-                  child: Text(
-                    'Patrol is like flutter_test on steroids',
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green[700],
-                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                    const SizedBox(height: 24),
+                    Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Colors.grey.withValues(alpha: 0.3),
+                          width: 1,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          _SummaryItem(
+                            icon: Icons.phone_android,
+                            text: 'Native UI automation',
+                            color: Colors.blue,
+                          ),
+                          const SizedBox(height: 12),
+                          _SummaryItem(
+                            icon: Icons.api,
+                            text: 'Intuitive API',
+                            color: Colors.green,
+                          ),
+                          const SizedBox(height: 12),
+                          _SummaryItem(
+                            icon: Icons.security,
+                            text: 'Full isolation',
+                            color: Colors.orange,
+                          ),
+                          const SizedBox(height: 12),
+                          _SummaryItem(
+                            icon: Icons.cloud_done,
+                            text: 'Device farm support',
+                            color: Colors.purple,
+                          ),
+                          const SizedBox(height: 12),
+                          _SummaryItem(
+                            icon: Icons.business,
+                            text: 'Real-world production use',
+                            color: Colors.red,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                    const SizedBox(height: 20),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 32,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.green.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Colors.green.withValues(alpha: 0.3),
+                          width: 2,
+                        ),
+                      ),
+                      child: Text(
+                        'Patrol is like flutter_test on steroids',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green[700],
+                          fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                ],
               ),
             ),
           ),
@@ -135,25 +137,25 @@ class _SummaryItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 48,
-          height: 48,
+          width: 36,
+          height: 36,
           decoration: BoxDecoration(
             color: color.withValues(alpha: 0.2),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Center(
             child: Icon(
               icon,
-              size: 28,
+              size: 20,
               color: color,
             ),
           ),
         ),
-        const SizedBox(width: 20),
+        const SizedBox(width: 16),
         Text(
           text,
           style: TextStyle(
-            fontSize: 28,
+            fontSize: 20,
             fontWeight: FontWeight.w600,
             color: Colors.black87,
             fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
