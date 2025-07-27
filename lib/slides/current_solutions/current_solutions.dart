@@ -77,7 +77,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                       child: Column(
                         children: [
                           Text(
-                            'しかし、ここに問題があります...',
+                            'しかし、ここに問題がある...',
                             style: TextStyle(
                               fontSize: 36,
                               fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(height: 20),
                           Text(
-                            'Flutterのインテグレーションテストは Dart専用として扱われます',
+                            'Flutterのインテグレーションテストは Dart専用として扱われる',
                             style: TextStyle(
                               fontSize: 28,
                               color: Colors.black87,
@@ -96,7 +96,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            '一方、ネイティブツールは JUnit や XCTest を期待します',
+                            '一方、ネイティブツールは JUnit や XCTest を期待する',
                             style: TextStyle(
                               fontSize: 24,
                               fontStyle: FontStyle.italic,

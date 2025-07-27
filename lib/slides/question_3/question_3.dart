@@ -14,7 +14,7 @@ class Question3Slide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/question-3',
-            title: '質問3: インテグレーションテストを書くのは好きですか？',
+            title: '質問3: インテグレーションテストを書くのは好き？',
           ),
         );
 
@@ -59,7 +59,7 @@ class _Question3SlideContent extends HookWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'インテグレーションテストを書くのは好きですか？',
+              'インテグレーションテストを書くのは好き？',
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,

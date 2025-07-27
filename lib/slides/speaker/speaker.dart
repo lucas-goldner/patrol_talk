@@ -98,7 +98,7 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                       ),
                       const SizedBox(height: 20),
                       _HobbyItem(text: '📱 個人アプリ開発'),
-                      _HobbyItem(text: '🌍 語学学習（5言語話せます！）'),
+                      _HobbyItem(text: '🌍 語学学習（5言語話せる！）'),
                       _HobbyItem(text: '🇯🇵 日本語勉強中'),
                       _HobbyItem(text: '🎤 カラオケ'),
                     ],

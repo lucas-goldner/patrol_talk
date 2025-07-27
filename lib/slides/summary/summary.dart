@@ -35,7 +35,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'Flutterについにふさわしいテストフレームワークが誕生しました',
+                      'Flutterについにふさわしいテストフレームワークが誕生した',
                       style: TextStyle(
                         fontSize: 24,
                         fontStyle: FontStyle.italic,
@@ -103,7 +103,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
                         ),
                       ),
                       child: Text(
-                        'Patrolはflutter_testの強化版です',
+                        'Patrolはflutter_testの強化版',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,

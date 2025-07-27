@@ -55,7 +55,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                               number: '1',
                               title: 'ネイティブUIとの連携',
                               content:
-                                  'パーミションダイアログ、WebView、Apple/Googleサインイン\n\nFlutterでは対応できません。',
+                                  'パーミションダイアログ、WebView、Apple/Googleサインイン\n\nFlutterでは対応できない。',
                               color: Colors.orange,
                               icon: Icons.phone_android,
                             ),
@@ -64,7 +64,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                               const _ProblemCard(
                                 number: '2',
                                 title: '冗長なコード',
-                                content: '最もシンプルなテストでも\n\n冗長なコードの壁になってしまいます。',
+                                content: 'シンプルなテストでもコードが多すぎる',
                                 color: Colors.purple,
                                 icon: Icons.code_off,
                               ),
@@ -98,19 +98,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                             Row(
                               children: [
                                 Text(
-                                  '// シンプルなサインアップテストより ',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.green[400],
-                                    fontFamily: 'monospace',
-                                  ),
-                                ),
-                                SvgPicture.asset(
-                                  'assets/images/leancode-logo.svg',
-                                  height: 24,
-                                ),
-                                Text(
-                                  ' - このひどい状況をご覧ください！',
+                                  '// やばくない？！',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.green[400],
@@ -146,7 +134,7 @@ await tester.pumpAndSettle();''',
                             Row(
                               children: [
                                 Text(
-                                  'すべてのpumpAndSettle()を手動で挿入する必要があります！ ',
+                                  'すべてのpumpAndSettle()を手動で挿入する必要がある！ ',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.red[400],
@@ -160,7 +148,7 @@ await tester.pumpAndSettle();''',
                                   height: 32,
                                 ),
                                 Text(
-                                  ' が解決します！',
+                                  ' が解決する！',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.green[400],

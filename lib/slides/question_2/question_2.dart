@@ -14,7 +14,7 @@ class Question2Slide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/question-2',
-            title: '質問2: どんな種類のテストを書いていますか？',
+            title: '質問2: どんな種類のテストを書いてる？',
           ),
         );
 
@@ -64,7 +64,7 @@ class _Question2SlideContent extends HookWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'どんな種類のテストを書いていますか？',
+              'どんな種類のテストを書いてる？',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,

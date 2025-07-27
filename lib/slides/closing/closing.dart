@@ -3,6 +3,7 @@ import 'package:flutter_deck/flutter_deck.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/widgets/glass_container.dart';
 import 'package:patrol_presentation/core/widgets/slide_with_mesh.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class ClosingSlide extends FlutterDeckSlideWidget {
   const ClosingSlide()
@@ -24,7 +25,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 Text(
-                  '🙋‍♂️ ありがとうございました！',
+                  '🙋‍♂️ ありがとう！',
                   style: TextStyle(
                     fontSize: 72,
                     fontWeight: FontWeight.bold,
@@ -33,79 +34,110 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-                Container(
-                  padding: const EdgeInsets.all(40),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: Colors.grey.withValues(alpha: 0.3),
-                      width: 1,
-                    ),
-                  ),
-                  child: Column(
-                    children: [
-                      Text(
-                        '始めるには：',
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                          fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Left side - Get started
+                    Container(
+                      padding: const EdgeInsets.all(40),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Colors.grey.withValues(alpha: 0.3),
+                          width: 1,
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[900],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          'flutter pub add --dev patrol',
-                          style: const TextStyle(
-                            fontSize: 24,
-                            color: Colors.white,
-                            fontFamily: 'monospace',
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 30),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Column(
                         children: [
-                          const Icon(
-                            Icons.chat_bubble_outline,
-                            size: 32,
-                            color: Colors.blue,
-                          ),
-                          const SizedBox(width: 16),
                           Text(
-                            'Discordに参加してください：',
+                            '始めるには：',
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                              fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Container(
+                            padding: const EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                              color: Colors.grey[900],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: const Text(
+                              'flutter pub add --dev patrol',
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                                fontFamily: 'monospace',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 40),
+                    // Right side - QR code for X
+                    Container(
+                      padding: const EdgeInsets.all(40),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: Colors.grey.withValues(alpha: 0.3),
+                          width: 1,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Let\'s connect on X!',
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                              fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withValues(alpha: 0.1),
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 5),
+                                ),
+                              ],
+                            ),
+                            child: QrImageView(
+                              data: 'https://twitter.com/LucasGoldner',
+                              size: 200,
+                              backgroundColor: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            '@LucasGoldner',
                             style: TextStyle(
                               fontSize: 24,
-                              color: Colors.black87,
+                              color: Colors.blue[700],
                               fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10),
-                      Text(
-                        'https://patrol.leancode.dev/chat',
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.blue[700],
-                          decoration: TextDecoration.underline,
-                          fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 40),
                 Text(
-                  '質問はありますか？最も困難なテストシナリオについてお話ししましょう！',
+                  '質問はある？最も困難なテストシナリオについて話そう！',
                   style: TextStyle(
                     fontSize: 28,
                     fontStyle: FontStyle.italic,
