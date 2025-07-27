@@ -39,8 +39,18 @@ class TitleSlide extends FlutterDeckSlideWidget {
                   Text(
                     'FlutterのE2Eテストフレームワーク',
                     style: TextStyle(
-                      fontSize: 36,
+                      fontSize: 24,
                       color: Colors.black87,
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    '『Patrolで和牛ほど高級インテグレーションテスト書こう！』🥩',
+                    style: TextStyle(
+                      fontSize: 64,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w600,
                       fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                     ),
                   ),
