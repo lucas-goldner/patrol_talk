@@ -9,7 +9,7 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/speaker',
-            title: 'Speaker Introduction',
+            title: 'スピーカー紹介',
           ),
         );
 
@@ -71,24 +71,24 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                       const SizedBox(height: 30),
                       _InfoItem(
                         icon: Icons.star,
-                        text: 'Flutter & Dart Google Developer Expert',
+                        text: 'Flutter・Dart Google Developer Expert',
                         color: Colors.blue,
                       ),
                       const SizedBox(height: 20),
                       _InfoItem(
                         icon: Icons.group,
-                        text: 'Flutter Tokyo Organizer',
+                        text: 'Flutter Tokyo オーガナイザー',
                         color: Colors.purple,
                       ),
                       const SizedBox(height: 20),
                       _InfoItem(
                         icon: Icons.work,
-                        text: 'Flutter Engineer at Youtrust',
+                        text: 'YoutrustのFlutterエンジニア',
                         color: Colors.green,
                       ),
                       const SizedBox(height: 40),
                       Text(
-                        '🎯 Hobbies',
+                        '🎯 趣味',
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
@@ -97,10 +97,10 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      _HobbyItem(text: '📱 Working on my own apps'),
-                      _HobbyItem(text: '🌍 Learning languages (speak 5!)'),
-                      _HobbyItem(text: '🇯🇵 Learning Japanese now'),
-                      _HobbyItem(text: '🎤 Karaoke'),
+                      _HobbyItem(text: '📱 個人アプリ開発'),
+                      _HobbyItem(text: '🌍 語学学習（5言語話せます！）'),
+                      _HobbyItem(text: '🇯🇵 日本語勉強中'),
+                      _HobbyItem(text: '🎤 カラオケ'),
                     ],
                   ),
                 ),

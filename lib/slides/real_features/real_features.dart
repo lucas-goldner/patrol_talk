@@ -9,7 +9,7 @@ class RealFeaturesSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/real-features',
-            title: 'Real Features',
+            title: '実際の機能',
             steps: 2,
           ),
         );
@@ -35,7 +35,7 @@ class RealFeaturesSlide extends FlutterDeckSlideWidget {
                       ),
                       const SizedBox(width: 20),
                       Text(
-                        'Real Features',
+                        '実際の機能',
                         style: TextStyle(
                           fontSize: 56,
                           fontWeight: FontWeight.bold,
@@ -47,7 +47,7 @@ class RealFeaturesSlide extends FlutterDeckSlideWidget {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'Patrol supports out-of-the-box:',
+                    'Patrolは最初からサポート:',
                     style: TextStyle(
                       fontSize: 28,
                       color: Colors.black54,
@@ -83,25 +83,25 @@ await native.tapOnNotificationByIndex(0);''',
                       children: [
                         _FeatureCard(
                           icon: Icons.web,
-                          title: 'WebView logins',
+                          title: 'WebViewログイン',
                           color: Colors.blue,
                         ),
                         const SizedBox(width: 20),
                         _FeatureCard(
                           icon: Icons.chat_bubble,
-                          title: 'System dialogs',
+                          title: 'システムダイアログ',
                           color: Colors.green,
                         ),
                         const SizedBox(width: 20),
                         _FeatureCard(
                           icon: Icons.notifications,
-                          title: 'Push notifications',
+                          title: 'プッシュ通知',
                           color: Colors.orange,
                         ),
                         const SizedBox(width: 20),
                         _FeatureCard(
                           icon: Icons.dark_mode,
-                          title: 'Dark mode UI',
+                          title: 'ダークモードUI',
                           color: Colors.purple,
                         ),
                       ],
@@ -121,7 +121,7 @@ await native.tapOnNotificationByIndex(0);''',
                         ),
                       ),
                       child: Text(
-                        'Used in production by LeanCode and dozens of companies—battle-tested.',
+                        'LeanCodeや多数の企業で本番使用—実戦でテスト済み。',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,

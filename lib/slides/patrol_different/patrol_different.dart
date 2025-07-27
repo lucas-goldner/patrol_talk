@@ -9,7 +9,7 @@ class PatrolDifferentSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/patrol-different',
-            title: 'What Makes Patrol Different?',
+            title: 'Patrolの何が違うのか？',
             steps: 3,
           ),
         );
@@ -26,7 +26,7 @@ class PatrolDifferentSlide extends FlutterDeckSlideWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   Text(
-                    '🧱 What Makes Patrol Different?',
+                    '🧱 Patrolの何が違うのか？',
                     style: TextStyle(
                       fontSize: 56,
                       fontWeight: FontWeight.bold,
@@ -41,14 +41,14 @@ class PatrolDifferentSlide extends FlutterDeckSlideWidget {
                       children: [
                         _FeatureCard(
                           icon: Icons.code,
-                          title: 'Builds on flutter_test',
-                          description: 'Full Dart support',
+                          title: 'flutter_testをベースに構築',
+                          description: '完全なDartサポート',
                           color: Colors.blue,
                         ),
                         const SizedBox(width: 30),
                         _FeatureCard(
                           icon: Icons.phone_android,
-                          title: 'Native Automation',
+                          title: 'ネイティブ自動化',
                           description: 'UIAutomator & XCUITest',
                           color: Colors.green,
                         ),
@@ -73,18 +73,18 @@ class PatrolDifferentSlide extends FlutterDeckSlideWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              _CheckItem(text: 'Tap native permission dialogs'),
+                              const _CheckItem(text: 'ネイティブパーミションダイアログをタップ'),
                               const SizedBox(width: 40),
-                              _CheckItem(text: 'Interact with WebViews'),
+                              const _CheckItem(text: 'WebViewとの連携'),
                             ],
                           ),
                           const SizedBox(height: 20),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              _CheckItem(text: 'Toggle Wi-Fi, dark mode'),
+                              const _CheckItem(text: 'Wi-Fi、ダークモード切り替え'),
                               const SizedBox(width: 40),
-                              _CheckItem(text: 'Works with device farms'),
+                              const _CheckItem(text: 'デバイスファームとの連携'),
                             ],
                           ),
                         ],
@@ -116,7 +116,7 @@ class PatrolDifferentSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(width: 20),
                           Text(
-                            'Intuitive API — No pumpAndSettle() hell',
+                            '直感的なAPI — pumpAndSettle()地獄からの解放',
                             style: TextStyle(
                               fontSize: 32,
                               fontWeight: FontWeight.w600,

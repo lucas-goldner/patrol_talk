@@ -12,7 +12,7 @@ class Question3Slide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/question-3',
-            title: 'Question 3: Do you like writing integration tests?',
+            title: '質問3: インテグレーションテストを書くのは好きですか？',
           ),
         );
 
@@ -26,9 +26,9 @@ class Question3Slide extends FlutterDeckSlideWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Do you like writing integration tests?',
+                  'インテグレーションテストを書くのは好きですか？',
                   style: TextStyle(
-                    fontSize: 56,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
@@ -56,12 +56,12 @@ class Question3Slide extends FlutterDeckSlideWidget {
 
                       final graphData = [
                         GraphData(
-                          label: 'Like Integration Tests',
+                          label: 'インテグレーションテストが好き',
                           value: integrationPreference.yes,
                           color: Colors.green,
                         ),
                         GraphData(
-                          label: "Don't Like Integration Tests",
+                          label: 'インテグレーションテストが嫌い',
                           value: integrationPreference.no,
                           color: Colors.red,
                         ),

@@ -9,7 +9,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/summary',
-            title: 'Summary',
+            title: 'まとめ',
           ),
         );
 
@@ -25,7 +25,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '🎯 Summary',
+                      '🎯 まとめ',
                       style: TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'Flutter finally has a test framework it deserves',
+                      'Flutterについにふさわしいテストフレームワークが誕生しました',
                       style: TextStyle(
                         fontSize: 24,
                         fontStyle: FontStyle.italic,
@@ -58,31 +58,31 @@ class SummarySlide extends FlutterDeckSlideWidget {
                         children: [
                           _SummaryItem(
                             icon: Icons.phone_android,
-                            text: 'Native UI automation',
+                            text: 'ネイティブUI自動化',
                             color: Colors.blue,
                           ),
                           const SizedBox(height: 12),
                           _SummaryItem(
                             icon: Icons.api,
-                            text: 'Intuitive API',
+                            text: '直感的なAPI',
                             color: Colors.green,
                           ),
                           const SizedBox(height: 12),
                           _SummaryItem(
                             icon: Icons.security,
-                            text: 'Full isolation',
+                            text: '完全な分離',
                             color: Colors.orange,
                           ),
                           const SizedBox(height: 12),
                           _SummaryItem(
                             icon: Icons.cloud_done,
-                            text: 'Device farm support',
+                            text: 'デバイスファームサポート',
                             color: Colors.purple,
                           ),
                           const SizedBox(height: 12),
                           _SummaryItem(
                             icon: Icons.business,
-                            text: 'Real-world production use',
+                            text: '現実世界での本番使用',
                             color: Colors.red,
                           ),
                         ],
@@ -103,7 +103,7 @@ class SummarySlide extends FlutterDeckSlideWidget {
                         ),
                       ),
                       child: Text(
-                        'Patrol is like flutter_test on steroids',
+                        'Patrolはflutter_testの強化版です',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,

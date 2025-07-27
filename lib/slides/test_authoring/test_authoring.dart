@@ -9,7 +9,7 @@ class TestAuthoringSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/test-authoring',
-            title: 'Test Authoring Demo',
+            title: 'テスト作成デモ',
             steps: 3,
           ),
         );
@@ -28,7 +28,7 @@ class TestAuthoringSlide extends FlutterDeckSlideWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '🧠 Test Authoring Demo',
+                          '🧠 テスト作成デモ',
                           style: TextStyle(
                             fontSize: 56,
                             fontWeight: FontWeight.bold,
@@ -38,7 +38,7 @@ class TestAuthoringSlide extends FlutterDeckSlideWidget {
                         ),
                         const SizedBox(height: 20),
                         Text(
-                          'Side-by-side: integration_test vs. Patrol',
+                          '比較: integration_test vs. Patrol',
                           style: TextStyle(
                             fontSize: 28,
                             color: Colors.black54,
@@ -52,7 +52,7 @@ class TestAuthoringSlide extends FlutterDeckSlideWidget {
                           children: [
                             if (step >= 1)
                               _CodeComparisonCard(
-                                title: 'integration_test (verbose)',
+                                title: 'integration_test (繁雑)',
                                 color: Colors.red,
                                 code: '''// Traditional approach
 await tester.pumpAndSettle();
@@ -74,7 +74,7 @@ await tester.pumpAndSettle();''',
                             if (step >= 1) const SizedBox(width: 30),
                             if (step >= 2)
                               _CodeComparisonCard(
-                                title: 'Patrol (concise)',
+                                title: 'Patrol (簡潔)',
                                 color: Colors.green,
                                 code: r'''// Patrol approach
 await $('email').enter('charlie@root.me');
@@ -198,7 +198,7 @@ class _AnimatedStatCardState extends State<_AnimatedStatCard>
                       ),
                       const SizedBox(width: 24),
                       Text(
-                        '50% shorter code',
+                        'コードが50%短く',
                         style: TextStyle(
                           fontSize: 48,
                           fontWeight: FontWeight.bold,
@@ -210,7 +210,7 @@ class _AnimatedStatCardState extends State<_AnimatedStatCard>
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    '🤖 AI assistants can write it reliably now!',
+                    '🤖 AIアシスタントが信頼性の高いコードを書けるように！',
                     style: TextStyle(
                       fontSize: 32,
                       fontStyle: FontStyle.italic,

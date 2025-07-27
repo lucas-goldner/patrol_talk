@@ -9,7 +9,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/current-solutions',
-            title: 'Current Solutions',
+            title: '現在のソリューション',
             steps: 4,
           ),
         );
@@ -25,7 +25,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '🧪 Current Solutions',
+                    '🧪 現在のソリューション',
                     style: TextStyle(
                       fontSize: 64,
                       fontWeight: FontWeight.bold,
@@ -40,7 +40,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                       if (step >= 1)
                         _SolutionCard(
                           title: 'test',
-                          description: 'Great for unit tests',
+                          description: 'ユニットテストに最適',
                           icon: Icons.check_circle,
                           color: Colors.green,
                         ),
@@ -48,7 +48,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                       if (step >= 2)
                         _SolutionCard(
                           title: 'flutter_test',
-                          description: 'Used for widget tests',
+                          description: 'ウィジェットテストに使用',
                           icon: Icons.widgets,
                           color: Colors.blue,
                         ),
@@ -56,7 +56,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                       if (step >= 3)
                         _SolutionCard(
                           title: 'integration_test',
-                          description: 'End-to-end tests',
+                          description: 'エンドツーエンドテスト',
                           icon: Icons.phone_android,
                           color: Colors.orange,
                         ),
@@ -77,7 +77,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                       child: Column(
                         children: [
                           Text(
-                            'But here\'s the catch...',
+                            'しかし、ここに問題があります...',
                             style: TextStyle(
                               fontSize: 36,
                               fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(height: 20),
                           Text(
-                            'Flutter integration tests are treated as Dart-only',
+                            'Flutterのインテグレーションテストは Dart専用として扱われます',
                             style: TextStyle(
                               fontSize: 28,
                               color: Colors.black87,
@@ -96,7 +96,7 @@ class CurrentSolutionsSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            'Meanwhile, native tooling expects JUnit or XCTest',
+                            '一方、ネイティブツールは JUnit や XCTest を期待します',
                             style: TextStyle(
                               fontSize: 24,
                               fontStyle: FontStyle.italic,

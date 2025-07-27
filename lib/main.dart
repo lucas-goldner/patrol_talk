@@ -19,6 +19,7 @@ import 'package:patrol_presentation/slides/demo/demo.dart';
 import 'package:patrol_presentation/slides/closing/closing.dart';
 import 'package:patrol_presentation/slides/title/title.dart';
 import 'package:patrol_presentation/slides/speaker/speaker.dart';
+import 'package:patrol_presentation/slides/qr_code/qr_code.dart';
 import 'package:patrol_presentation/services/websocket_service.dart';
 
 void main() {
@@ -92,6 +93,7 @@ class FlutterDeckExample extends StatelessWidget {
           slides: const [
             TitleSlide(),
             SpeakerSlide(),
+            QrCodeSlide(),
             Question1Slide(),
             Question2Slide(),
             Question3Slide(),

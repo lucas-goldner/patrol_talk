@@ -12,7 +12,7 @@ class Question1Slide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/question-1',
-            title: 'Question 1: Do you write tests?',
+            title: '質問1: テストを書いていますか？',
           ),
         );
 
@@ -26,7 +26,7 @@ class Question1Slide extends FlutterDeckSlideWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Do you write tests?',
+                  'テストを書いていますか？',
                   style: TextStyle(
                     fontSize: 56,
                     fontWeight: FontWeight.bold,
@@ -64,12 +64,12 @@ class Question1Slide extends FlutterDeckSlideWidget {
 
                       final graphData = [
                         GraphData(
-                          label: 'Write Tests',
+                          label: 'テストを書く',
                           value: testingData.doesTest,
                           color: Colors.green,
                         ),
                         GraphData(
-                          label: "Don't Write Tests",
+                          label: 'テストを書かない',
                           value: testingData.doesNotTest,
                           color: Colors.red,
                         ),

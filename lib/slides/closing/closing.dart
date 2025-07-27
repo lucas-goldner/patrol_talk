@@ -9,7 +9,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/closing',
-            title: 'Closing & Q&A',
+            title: '終わりに・質疑応答',
           ),
         );
 
@@ -24,7 +24,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 Text(
-                  '🙋‍♂️ Thank You!',
+                  '🙋‍♂️ ありがとうございました！',
                   style: TextStyle(
                     fontSize: 72,
                     fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                   child: Column(
                     children: [
                       Text(
-                        'To get started:',
+                        '始めるには：',
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(width: 16),
                           Text(
-                            'Join us on Discord:',
+                            'Discordに参加してください：',
                             style: TextStyle(
                               fontSize: 24,
                               color: Colors.black87,
@@ -105,7 +105,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                 ),
                 const SizedBox(height: 40),
                 Text(
-                  'Questions? Let\'s talk about your toughest test scenarios!',
+                  '質問はありますか？最も困難なテストシナリオについてお話ししましょう！',
                   style: TextStyle(
                     fontSize: 28,
                     fontStyle: FontStyle.italic,

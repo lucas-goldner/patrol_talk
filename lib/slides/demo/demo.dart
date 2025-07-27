@@ -9,7 +9,7 @@ class DemoSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/demo',
-            title: 'Demo',
+            title: 'デモ',
           ),
         );
 
@@ -43,7 +43,7 @@ class _DemoContentState extends State<_DemoContent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Let's run it!",
+          "実行してみましょう！",
           style: TextStyle(
             fontSize: 72,
             fontWeight: FontWeight.bold,
@@ -72,7 +72,7 @@ class _DemoContentState extends State<_DemoContent> {
               elevation: 8,
             ),
             child: Text(
-              'Click Me',
+              'クリックしてください',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
@@ -104,7 +104,7 @@ class _DemoContentState extends State<_DemoContent> {
                 ),
                 const SizedBox(width: 20),
                 Text(
-                  'Success!',
+                  '成功！',
                   style: TextStyle(
                     fontSize: 56,
                     fontWeight: FontWeight.bold,

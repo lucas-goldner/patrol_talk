@@ -9,7 +9,7 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/under-the-hood',
-            title: 'Under the Hood',
+            title: '中身の仕組み',
             steps: 3,
           ),
         );
@@ -36,7 +36,7 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
                           ),
                           const SizedBox(width: 16),
                           Text(
-                            'Under the Hood',
+                            '中身の仕組み',
                             style: TextStyle(
                               fontSize: 48,
                               fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'How does it work?',
+                                'どのように動作するのか？',
                                 style: TextStyle(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
@@ -72,11 +72,11 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
                               ),
                               const SizedBox(height: 16),
                               _FeatureItem(
-                                text: 'Replaces integration_test with a Patrol plugin',
+                                text: 'integration_testをPatrolプラグインで置き換え',
                               ),
                               const SizedBox(height: 10),
                               _FeatureItem(
-                                text: 'Flows: patrol_test → flutter_test → test package',
+                                text: 'フロー: patrol_test → flutter_test → testパッケージ',
                               ),
                             ],
                           ),
@@ -98,7 +98,7 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Each test runs:',
+                                '各テストの実行:',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
@@ -109,28 +109,28 @@ class UnderTheHoodSlide extends FlutterDeckSlideWidget {
                               const SizedBox(height: 12),
                               _BenefitItem(
                                 icon: Icons.memory,
-                                text: 'In its own app process',
+                                text: '独立したアプリプロセスで実行',
                               ),
                               _BenefitItem(
                                 icon: Icons.security,
-                                text: 'With full isolation',
+                                text: '完全な分離で安全',
                               ),
                               _BenefitItem(
                                 icon: Icons.bug_report,
-                                text: 'Crash-resilient—one crash won\'t affect others',
+                                text: 'クラッシュ耐性—一つのクラッシュが他に影響しない',
                               ),
                               _BenefitItem(
                                 icon: Icons.dashboard,
-                                text: 'Supports sharding',
+                                text: 'シャード化をサポート',
                               ),
                               _BenefitItem(
                                 icon: Icons.timer,
-                                text: 'Reports durations correctly',
+                                text: '実行時間を正確にレポート',
                               ),
                               if (step >= 3)
                                 _BenefitItem(
                                   icon: Icons.local_fire_department,
-                                  text: 'Hot-restart friendly during dev 🔥',
+                                  text: '開発中のホットリスタートに対応 🔥',
                                   color: Colors.orange,
                                   fontSize: 24,
                                   iconSize: 28,

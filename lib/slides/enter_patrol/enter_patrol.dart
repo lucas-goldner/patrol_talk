@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/widgets/glass_container.dart';
 import 'package:patrol_presentation/core/widgets/slide_with_mesh.dart';
@@ -9,7 +10,7 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/enter-patrol',
-            title: 'Enter Patrol',
+            title: 'Patrol登場',
           ),
         );
 
@@ -29,7 +30,7 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
                 ),
                 const SizedBox(height: 40),
                 Text(
-                  '✨ Enter Patrol',
+                  '✨ Patrol登場',
                   style: TextStyle(
                     fontSize: 80,
                     fontWeight: FontWeight.bold,
@@ -52,7 +53,7 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '🚨 The Flutter-first UI testing framework',
+                        '🚨 Flutter第一のUIテストフレームワーク',
                         style: TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.w600,
@@ -64,19 +65,14 @@ class EnterPatrolSlide extends FlutterDeckSlideWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(
-                            Icons.business,
-                            size: 32,
-                            color: Colors.blue,
+                          SvgPicture.asset(
+                            'assets/images/leancode-logo.svg',
+                            height: 50,
                           ),
-                          const SizedBox(width: 16),
-                          Text(
-                            'by LeanCode',
-                            style: TextStyle(
-                              fontSize: 28,
-                              color: Colors.blue[700],
-                              fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
-                            ),
+                          const SizedBox(width: 30),
+                          Image.asset(
+                            'assets/images/patrol.webp',
+                            height: 50,
                           ),
                         ],
                       ),

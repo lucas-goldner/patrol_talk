@@ -12,7 +12,7 @@ class Question2Slide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/question-2',
-            title: 'Question 2: Which kind of tests do you write?',
+            title: '質問2: どんな種類のテストを書いていますか？',
           ),
         );
 
@@ -26,9 +26,9 @@ class Question2Slide extends FlutterDeckSlideWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Which kind of tests do you write?',
+                  'どんな種類のテストを書いていますか？',
                   style: TextStyle(
-                    fontSize: 56,
+                    fontSize: 48,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
@@ -64,17 +64,17 @@ class Question2Slide extends FlutterDeckSlideWidget {
 
                       final graphData = [
                         GraphData(
-                          label: 'Unit Tests',
+                          label: 'ユニットテスト',
                           value: testTypes.unitTests,
                           color: Colors.blue,
                         ),
                         GraphData(
-                          label: 'Widget Tests',
+                          label: 'ウィジェットテスト',
                           value: testTypes.widgetTests,
                           color: Colors.orange,
                         ),
                         GraphData(
-                          label: 'Integration Tests',
+                          label: 'インテグレーションテスト',
                           value: testTypes.integrationTests,
                           color: Colors.purple,
                         ),

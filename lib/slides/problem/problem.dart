@@ -10,7 +10,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/problem',
-            title: 'The Problem',
+            title: '問題',
             steps: 7,
           ),
         );
@@ -29,7 +29,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '❌ The Problem',
+                        '❌ 問題',
                         style: TextStyle(
                           fontSize: 56,
                           fontWeight: FontWeight.bold,
@@ -39,7 +39,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Flutter has no really great solution for UI testing',
+                        'FlutterにはUIテストの本当に優れたソリューションがない',
                         style: TextStyle(
                           fontSize: 32,
                           color: Colors.black87,
@@ -51,19 +51,20 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            _ProblemCard(
+                            const _ProblemCard(
                               number: '1',
-                              title: 'Native UI Interactions',
-                              content: 'Permission dialogs, WebViews, Apple/Google sign-in\n\nFlutter can\'t do that.',
+                              title: 'ネイティブUIとの連携',
+                              content:
+                                  'パーミションダイアログ、WebView、Apple/Googleサインイン\n\nFlutterでは対応できません。',
                               color: Colors.orange,
                               icon: Icons.phone_android,
                             ),
                             const SizedBox(width: 20),
                             if (step >= 6)
-                              _ProblemCard(
+                              const _ProblemCard(
                                 number: '2',
-                                title: 'Verbose Code',
-                                content: 'Even the simplest test becomes a\n\nverbose wall of code.',
+                                title: '冗長なコード',
+                                content: '最もシンプルなテストでも\n\n冗長なコードの壁になってしまいます。',
                                 color: Colors.purple,
                                 icon: Icons.code_off,
                               ),
@@ -97,7 +98,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                             Row(
                               children: [
                                 Text(
-                                  '// Simple signup test from ',
+                                  '// シンプルなサインアップテストより ',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.green[400],
@@ -109,7 +110,7 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                                   height: 24,
                                 ),
                                 Text(
-                                  ' - Look at this mess!',
+                                  ' - このひどい状況をご覧ください！',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.green[400],
@@ -119,8 +120,9 @@ class ProblemSlide extends FlutterDeckSlideWidget {
                               ],
                             ),
                             const SizedBox(height: 12),
-                            Text(
-                              '''await tester.pumpAndSettle();
+                            const Text(
+                              '''
+await tester.pumpAndSettle();
 await tester.enterText(find.byKey(Key('email')), 'user@example.com');
 await tester.pumpAndSettle();
 await tester.enterText(find.byKey(Key('password')), 'password123');
@@ -144,12 +146,13 @@ await tester.pumpAndSettle();''',
                             Row(
                               children: [
                                 Text(
-                                  'Every pumpAndSettle() has to be manually inserted! ',
+                                  'すべてのpumpAndSettle()を手動で挿入する必要があります！ ',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.red[400],
                                     fontStyle: FontStyle.italic,
-                                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                                    fontFamily:
+                                        GoogleFonts.ibmPlexSansJp().fontFamily,
                                   ),
                                 ),
                                 Image.asset(
@@ -157,12 +160,13 @@ await tester.pumpAndSettle();''',
                                   height: 32,
                                 ),
                                 Text(
-                                  ' solves this!',
+                                  ' が解決します！',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.green[400],
                                     fontStyle: FontStyle.italic,
-                                    fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                                    fontFamily:
+                                        GoogleFonts.ibmPlexSansJp().fontFamily,
                                   ),
                                 ),
                               ],

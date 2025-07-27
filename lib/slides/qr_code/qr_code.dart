@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/widgets/glass_container.dart';
 import 'package:patrol_presentation/core/widgets/slide_with_mesh.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
-class TitleSlide extends FlutterDeckSlideWidget {
-  const TitleSlide()
+class QrCodeSlide extends FlutterDeckSlideWidget {
+  const QrCodeSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/title-slide',
-            title: 'Patrol: FlutterのE2Eテストフレームワーク',
-            footer: FlutterDeckFooterConfiguration(showFooter: false),
+            route: '/qr-code',
+            title: 'QRコード',
           ),
         );
 
@@ -26,37 +25,42 @@ class TitleSlide extends FlutterDeckSlideWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '🧪 Patrol',
+                    'スキャンしてください',
                     style: TextStyle(
-                      fontSize: 88,
+                      fontSize: 64,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                       fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'FlutterのE2Eテストフレームワーク',
-                    style: TextStyle(
-                      fontSize: 36,
-                      color: Colors.black87,
-                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                  const SizedBox(height: 60),
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.1),
+                          blurRadius: 20,
+                          offset: const Offset(0, 10),
+                        ),
+                      ],
+                    ),
+                    child: QrImageView(
+                      data: 'https://presentation-answer.globeapp.dev/',
+                      size: 400,
+                      backgroundColor: Colors.white,
                     ),
                   ),
-                  const SizedBox(height: 60),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/leancode-logo.svg',
-                        height: 80,
-                      ),
-                      const SizedBox(width: 60),
-                      Image.asset(
-                        'assets/images/patrol.webp',
-                        height: 80,
-                      ),
-                    ],
+                  const SizedBox(height: 40),
+                  Text(
+                    'Patrol ドキュメント',
+                    style: TextStyle(
+                      fontSize: 32,
+                      color: Colors.black54,
+                      fontFamily: GoogleFonts.ibmPlexSansJp().fontFamily,
+                    ),
                   ),
                 ],
               ),
