@@ -44,6 +44,7 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                       ),
                       child: ClipOval(
                         child: Image.asset(
+                          key: const Key('lucasImage'),
                           'assets/images/lucas.jpeg',
                           fit: BoxFit.cover,
                         ),
@@ -69,19 +70,19 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                         ),
                       ),
                       const SizedBox(height: 30),
-                      _InfoItem(
+                      const _InfoItem(
                         icon: Icons.star,
                         text: 'Flutter・Dart Google Developer Expert',
                         color: Colors.blue,
                       ),
                       const SizedBox(height: 20),
-                      _InfoItem(
+                      const _InfoItem(
                         icon: Icons.group,
                         text: 'Flutter Tokyo オーガナイザー',
                         color: Colors.purple,
                       ),
                       const SizedBox(height: 20),
-                      _InfoItem(
+                      const _InfoItem(
                         icon: Icons.work,
                         text: 'YoutrustのFlutterエンジニア',
                         color: Colors.green,
@@ -97,10 +98,10 @@ class SpeakerSlide extends FlutterDeckSlideWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      _HobbyItem(text: '📱 個人アプリ開発'),
-                      _HobbyItem(text: '🌍 語学学習（5言語話せる！）'),
-                      _HobbyItem(text: '🇯🇵 日本語勉強中'),
-                      _HobbyItem(text: '🎤 カラオケ'),
+                      const _HobbyItem(text: '📱 個人アプリ開発'),
+                      const _HobbyItem(text: '🌍 語学学習（5言語話せる！）'),
+                      const _HobbyItem(text: '🇯🇵 日本語勉強中'),
+                      const _HobbyItem(text: '🎤 カラオケ'),
                     ],
                   ),
                 ),

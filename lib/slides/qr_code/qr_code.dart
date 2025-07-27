@@ -48,6 +48,7 @@ class QrCodeSlide extends FlutterDeckSlideWidget {
                       ],
                     ),
                     child: QrImageView(
+                      key: const Key('qrCode'),
                       data: 'https://presentation-answer.globeapp.dev/',
                       size: 400,
                       backgroundColor: Colors.white,

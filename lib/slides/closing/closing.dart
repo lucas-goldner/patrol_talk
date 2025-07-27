@@ -26,6 +26,7 @@ class ClosingSlide extends FlutterDeckSlideWidget {
                 children: [
                 Text(
                   '🙋‍♂️ ありがとう！',
+                  key: const Key('closingTitle'),
                   style: TextStyle(
                     fontSize: 72,
                     fontWeight: FontWeight.bold,

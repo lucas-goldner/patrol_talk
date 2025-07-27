@@ -44,6 +44,7 @@ class _DemoContentState extends State<_DemoContent> {
       children: [
         Text(
           "実行してみましょう！",
+          key: const Key('demoTitle'),
           style: TextStyle(
             fontSize: 72,
             fontWeight: FontWeight.bold,
@@ -54,6 +55,7 @@ class _DemoContentState extends State<_DemoContent> {
         const SizedBox(height: 80),
         if (!_showSuccess) ...[
           ElevatedButton(
+            key: const Key('demoButton'),
             onPressed: () {
               setState(() {
                 _showSuccess = true;
@@ -105,6 +107,7 @@ class _DemoContentState extends State<_DemoContent> {
                 const SizedBox(width: 20),
                 Text(
                   '成功！',
+                  key: const Key('demoSuccess'),
                   style: TextStyle(
                     fontSize: 56,
                     fontWeight: FontWeight.bold,

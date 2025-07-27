@@ -27,6 +27,7 @@ class TitleSlide extends FlutterDeckSlideWidget {
                 children: [
                   Text(
                     '🧪 Patrol',
+                    key: const Key('patrolTitle'),
                     style: TextStyle(
                       fontSize: 88,
                       fontWeight: FontWeight.bold,
