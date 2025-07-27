@@ -22,11 +22,11 @@ dependencies:
   web_socket_channel: ^3.0.0
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.3
   flutter_gen_runner: ^5.1.0+1
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
+  patrol: ^3.18.0
   very_good_analysis: ^5.1.0
 
 flutter:
@@ -57,3 +57,10 @@ flutter_gen:
   line_length: 80
   integrations:
     flutter_svg: true
+
+patrol:
+  app_name: Patrol Talk
+  ios:
+    bundle_id: com.example.patroltalk
+  macos:
+    bundle_id: com.example.patroltalk
