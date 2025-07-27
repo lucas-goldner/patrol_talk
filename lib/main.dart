@@ -8,6 +8,8 @@ import 'package:patrol_presentation/slides/question_2/question_2.dart';
 import 'package:patrol_presentation/slides/question_3/question_3.dart';
 import 'package:patrol_presentation/slides/problem/problem.dart';
 import 'package:patrol_presentation/slides/current_solutions/current_solutions.dart';
+import 'package:patrol_presentation/slides/native_tooling_problems/native_tooling_problems.dart';
+import 'package:patrol_presentation/slides/appium_problems/appium_problems.dart';
 import 'package:patrol_presentation/slides/enter_patrol/enter_patrol.dart';
 import 'package:patrol_presentation/slides/patrol_different/patrol_different.dart';
 import 'package:patrol_presentation/slides/test_authoring/test_authoring.dart';
@@ -20,10 +22,8 @@ import 'package:patrol_presentation/slides/closing/closing.dart';
 import 'package:patrol_presentation/slides/title/title.dart';
 import 'package:patrol_presentation/slides/speaker/speaker.dart';
 import 'package:patrol_presentation/slides/qr_code/qr_code.dart';
-import 'package:patrol_presentation/services/websocket_service.dart';
 
 void main() {
-  WebSocketService().connect();
   runApp(const FlutterDeckExample());
 }
 
@@ -99,6 +99,8 @@ class FlutterDeckExample extends StatelessWidget {
             Question3Slide(),
             ProblemSlide(),
             CurrentSolutionsSlide(),
+            NativeToolingProblemsSlide(),
+            AppiumProblemsSlide(),
             EnterPatrolSlide(),
             PatrolDifferentSlide(),
             TestAuthoringSlide(),
