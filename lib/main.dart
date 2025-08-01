@@ -3,25 +3,24 @@ import 'package:flutter/services.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patrol_presentation/core/backgrounds/mesh_deck_background.dart';
+import 'package:patrol_presentation/slides/closing/closing.dart';
+import 'package:patrol_presentation/slides/codemagic_patrol/codemagic_patrol.dart';
+import 'package:patrol_presentation/slides/current_solutions/current_solutions.dart';
+import 'package:patrol_presentation/slides/demo/demo.dart';
+import 'package:patrol_presentation/slides/enter_patrol/enter_patrol.dart';
+import 'package:patrol_presentation/slides/native_tooling_problems/native_tooling_problems.dart';
+import 'package:patrol_presentation/slides/patrol_different/patrol_different.dart';
+import 'package:patrol_presentation/slides/problem/problem.dart';
+import 'package:patrol_presentation/slides/qr_code/qr_code.dart';
 import 'package:patrol_presentation/slides/question_1/question_1.dart';
 import 'package:patrol_presentation/slides/question_2/question_2.dart';
 import 'package:patrol_presentation/slides/question_3/question_3.dart';
-import 'package:patrol_presentation/slides/problem/problem.dart';
-import 'package:patrol_presentation/slides/current_solutions/current_solutions.dart';
-import 'package:patrol_presentation/slides/native_tooling_problems/native_tooling_problems.dart';
-import 'package:patrol_presentation/slides/appium_problems/appium_problems.dart';
-import 'package:patrol_presentation/slides/enter_patrol/enter_patrol.dart';
-import 'package:patrol_presentation/slides/patrol_different/patrol_different.dart';
-import 'package:patrol_presentation/slides/test_authoring/test_authoring.dart';
-import 'package:patrol_presentation/slides/under_the_hood/under_the_hood.dart';
 import 'package:patrol_presentation/slides/real_features/real_features.dart';
-import 'package:patrol_presentation/slides/summary/summary.dart';
-import 'package:patrol_presentation/slides/codemagic_patrol/codemagic_patrol.dart';
-import 'package:patrol_presentation/slides/demo/demo.dart';
-import 'package:patrol_presentation/slides/closing/closing.dart';
-import 'package:patrol_presentation/slides/title/title.dart';
 import 'package:patrol_presentation/slides/speaker/speaker.dart';
-import 'package:patrol_presentation/slides/qr_code/qr_code.dart';
+import 'package:patrol_presentation/slides/summary/summary.dart';
+import 'package:patrol_presentation/slides/test_authoring/test_authoring.dart';
+import 'package:patrol_presentation/slides/title/title.dart';
+import 'package:patrol_presentation/slides/under_the_hood/under_the_hood.dart';
 
 void main() {
   runApp(const FlutterDeckExample());
@@ -100,7 +99,6 @@ class FlutterDeckExample extends StatelessWidget {
             ProblemSlide(),
             CurrentSolutionsSlide(),
             NativeToolingProblemsSlide(),
-            AppiumProblemsSlide(),
             EnterPatrolSlide(),
             PatrolDifferentSlide(),
             TestAuthoringSlide(),

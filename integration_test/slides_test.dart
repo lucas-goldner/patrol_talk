@@ -21,7 +21,6 @@ void main() {
         {'key': null, 'steps': 7}, // Problem slide (has 7 steps)
         {'key': null, 'steps': 4}, // Current solutions slide (has 4 steps)
         {'key': null, 'steps': 1}, // Native tooling problems slide
-        {'key': null, 'steps': 1}, // Appium problems slide
         {'key': null, 'steps': 1}, // Enter Patrol slide
         {'key': null, 'steps': 3}, // Patrol different slide (has 3 steps)
         {'key': null, 'steps': 3}, // Test authoring slide (has 3 steps)
