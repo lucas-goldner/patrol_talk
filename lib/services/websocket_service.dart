@@ -19,7 +19,7 @@ class WebSocketService {
   Future<void> connect() async {
     try {
       final uri = Uri.parse(
-        'ws://master-presentation-questions.globeapp.dev/read_results',
+        'wss://master-presentation-questions.globeapp.dev/read_results',
       );
       _channel = WebSocketChannel.connect(uri);
       
