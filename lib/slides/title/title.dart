@@ -46,7 +46,8 @@ class TitleSlide extends FlutterDeckSlideWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    '『Patrolで和牛ほど高級インテグレーションテスト書こう！』🥩',
+                    'もうバグは許さない — Flutter E2Eテスト最終対策',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 64,
                       color: Colors.black87,
