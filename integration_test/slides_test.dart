@@ -26,8 +26,6 @@ void main() {
         {'key': null, 'steps': 3}, // Test authoring slide (has 3 steps)
         {'key': null, 'steps': 3}, // Under the hood slide (has 3 steps)
         {'key': null, 'steps': 2}, // Real features slide (has 2 steps)
-        {'key': null, 'steps': 1}, // Summary slide
-        {'key': null, 'steps': 1}, // Codemagic Patrol slide
         {'key': 'demoTitle', 'steps': 1, 'isDemo': true}, // Demo slide
         {'key': 'closingTitle', 'steps': 1}, // Closing slide
       ];
